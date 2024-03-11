@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Information</title>
+</head>
+<body>
+    <h1>Player Information</h1>
+    <div>
+        <p>Name: <%= player.name %></p>
+        <p>Date of Birth: <%= player.dateOfBirth %></p>
+        <p>Photo URL: <%= player.photoUrl %></p>
+        <p>Birthplace: <%= player.birthPlace %></p>
+        <p>Career: <%= player.career %></p>
+        <p>Number of Matches: <%= player.numberOfMatches %></p>
+        <p>Score: <%= player.score %></p>
+        <p>Fifties: <%= player.fifties %></p>
+        <p>Centuries: <%= player.centuries %></p>
+        <p>Average: <%= player.average %></p>
+    </div>
+    <form action="/players/<%= player.id %>/edit" method="POST">
+        <!-- Input fields for updating player information -->
+        <!-- Make sure to populate the input fields with existing player data -->
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
